@@ -14,9 +14,14 @@ function setup() {
     function(data) {
       console.log("Got: " + data.x + " " + data.y);
       // Draw a blue circle
-      fill(random(0,255),0,255);
+      //fill(random(0,255),0,255);
+      fill(0,0,0,random(0,100));
+      //somebody connect with another person and tell me how it looks!
       noStroke();
-      ellipse(data.x,data.y,80,80);
+      //ellipse(data.x,data.y,random(42,100),random(37,120));
+      ellipse(data.x,data.y,random(8,420),random(8,370));
+      //try one or the other I WANNA KNOW HOW THIS LOOOOKS! 
+      //and play with the random numbers hehe
     }
   );
 }
@@ -27,9 +32,9 @@ function draw() {
 
 function mouseDragged() {
   // Draw some white circles
-  fill(random(0,255),random(0,255),random(0,255));
+  fill(random(0,255),random(0,255),random(0,255),random(1,100));
   noStroke();
-  ellipse(mouseX,mouseY,80,80);
+  ellipse(mouseX,mouseY,random(8,420),random(8,370));
   // Send the mouse coordinates
   sendmouse(mouseX,mouseY);
 }
